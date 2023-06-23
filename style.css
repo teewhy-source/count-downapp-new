@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#body {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(./ASSET/river-1589616_1280.jpg); */
+  background-image: url(./ASSET/fantasy-2925250_1280.jpg);
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  height: 90vh;
+  max-width: 50%;
+  /* background-image: url(./ASSET/fantasy-2925250_1280.jpg); */
+  background-image: url(./ASSET/river-1589616_1280.jpg);
+  background-size: cover;
+  opacity: 0.8;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  float: right;
+  width: 10rem;
+}
+
+/* I ran an animation. ignore */
+#container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* position: fixed; */
+  position: absolute;
+  filter: contrast(20);
+  /* background-color: black; */
+  overflow: hidden;
+}
+
+span {
+  color: goldenrod;
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  filter: blur(0.2rem);
+  display: block;
+  transition: all 1.5s ease;
+  opacity: 0;
+  filter: blur(0.6rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  float: right;
+}
+
+span:nth-child(1) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 0s;
+}
+
+span:nth-child(2) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 1s;
+  color: #00bee3;
+}
+span:nth-child(3) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 2s;
+  color: #f19639;
+}
+span:nth-child(4) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 3s;
+}
+span:nth-child(5) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 4s;
+  color: #ff4489;
+}
+span:nth-child(6) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 5s;
+  color: aliceblue;
+}
+span:nth-child(7) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 6s;
+  color: hotpink;
+}
+span:nth-child(8) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 7s;
+  color: chartreuse;
+}
+span:nth-child(9) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 8s;
+  color: darkturquoise;
+}
+span:nth-child(10) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 9s;
+  color: darkgreen;
+}
+span:nth-child(11) {
+  animation: letteranim 11s infinite ease;
+  animation-delay: 10s;
+  color: chartreuse;
+}
+
+@keyframes letteranim {
+  0% {
+    opacity: 0;
+    filter: blur(0.6rem);
+  }
+  5% {
+    opacity: 1;
+    filter: blur(0.2rem);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0.2rem);
+  }
+  20% {
+    opacity: 0;
+    filter: blur(0.6rem);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(0.6rem);
+  }
+}
+/* animation stops */
+
+.first-ct {
+  line-height: 1.5;
+  color: white;
+  padding-left: 5rem;
+  padding-top: 5rem;
+  font-size: 1.5rem;
+}
+/* button {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 20px;
+  background-color: #ff4489;
+} */
+
+.second-ct {
+  display: flex;
+  gap: 0.5rem;
+  /* float: right; */
+  margin-right: 5rem;
+  max-width: 5rem;
+  margin-top: 5rem;
+  /* background-color: red; */
+  padding-left:10rem ;
+}
+.days {
+  width: 15rem;
+  height: 14rem;
+  background-color: #00bee3;
+  color: white;
+  padding-top: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hours {
+  width: 10rem;
+  height: 14rem;
+  background-color: green;
+  color: white;
+  padding-top: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.minutes {
+  width: 10rem;
+  height: 14rem;
+  background-color: #ff4489;
+  color: white;
+  padding-top: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.seconds {
+  width: 11rem;
+  height: 14rem;
+  background-color: #f19639;
+  color: white;
+  padding-top: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* popup section */
+
+#popup {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 0, 128, 0.4);
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(./ASSET/fantasy-2925250_1280.jpg);
+  background-size: cover; */
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  /* text-align: center; */
+  transition: 1s ease-in-out;
+  transition-duration: 3s;
+}
+/* #time{
+  float: left;
+} */
+#ct-popup {
+
+  width: 80%;
+  height: 90%;
+  background-image: url(./ASSET/river-1589616_1280.jpg);
+  padding-top: 4rem;
+
+
+ 
+}
+
+#cancel{
+  border: .125rem solid green;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding-bottom: 0.5rem;
+  color: #f19639;
+  box-shadow: 2px 1px rgb(208, 197, 197);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #f19639; */
+  color: #c1bcb8;
+  font-size: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  /* text-align: center; */
+  margin-left: 29em;
+  font-size: 1.2rem;
+
+}
+
+input[type="number"] {
+  width: 10rem;
+  height: 1.9rem;
+  border-radius: 5px;
+  outline-style: double;
+  outline-color: honeydew;
+ text-transform: uppercase;
+margin-left: 40em;
+}
+
+#startButton,  #clicker, #resetButton{
+  margin-top: 10px;
+  width: 15rem;
+  padding: 5px 10px;
+  height: 3em;
+  margin-left: 16rem;
+  font-size: 16px;
+  background-color: #155817;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* padding-top: 1rem;
+  margin-left: 31rem; */
+  /* padding: 10px; */
+  box-shadow: 5px 5px rgb(67, 207, 67);
+}
+
+#countdown {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+/* #text{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 0, 128, 0.4);
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+} */
+
